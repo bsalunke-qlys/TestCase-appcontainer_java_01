@@ -1,5 +1,5 @@
 FROM openjdk:11-jdk-slim AS build-env
-ADD . /app/examples
+ADD ./examples/ /app/examples
 WORKDIR /app
 RUN javac examples/*.java
 RUN jar cfe main.jar examples.HelloJava examples/*.class 
